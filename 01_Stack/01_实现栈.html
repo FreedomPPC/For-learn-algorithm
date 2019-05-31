@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function Stack() {
+			var items = [];
+
+			// 往栈内压入一个元素
+			this.push = function(item) {
+				return items.push(item);
+			}
+
+			// 把栈顶层元素弹出
+			this.pop = function() {
+				return items.pop();
+			}
+
+			// 查看栈顶元素
+			this.top = function() {
+				return items[items.length -1];
+			}
+
+			// 查看栈是否为空
+			this.isEmpty = function() {
+				return items.length === 0;
+			}
+
+			// 查看栈的大小
+			this.size = function() {
+				return items.length;
+			}
+
+			// 清空栈
+			this.clear = function() {
+				items = [];
+			}
+		}
+
+
+	</script>
+</body>
+</html>

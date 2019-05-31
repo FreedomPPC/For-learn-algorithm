@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src="../assets/js/stack.js"></script>
+    <script>
+        const brackets_1 = '((adsf)((())(asdf))';
+        const brackets_2 = '(123)';
+
+        const isLegalBrackets = bracket => {
+            const stack = new Stack();
+            const len = bracket.length;
+
+            for (let i=0; i<len; i++) {
+                const item = bracket[i];
+
+                if (item === '(') {
+                    stack.push(item);
+                } else if (item == ')') {
+                    if (stack.isEmpty()) {
+                        return false;
+                    } else {
+                        stack.pop();
+                    }
+                }
+            }
+            return stack.size() === 0;
+        }
+
+        console.log(isLegalBrackets(brackets_1));
+        console.log(isLegalBrackets(brackets_2));
+
+    </script>
+</body>
+</html>

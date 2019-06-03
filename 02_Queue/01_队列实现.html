@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //  队列：先进先出
+        function Queue() {
+            const items = [];
+
+            // 向队列尾部添加元素
+            this.enqueue = function(item) {
+                return items.push(item);
+            }
+
+            // 移除队列头部删除元素
+            this.dequeue = function() {
+                return items.shift();
+            }
+
+            // 返回队列头部的元素
+            this.head = function() {
+                return items[0];
+            }
+
+            // 返回队列大小
+            this.size = function() {
+                return items.length;
+            }
+
+            // 清除队列
+            this.clear = function() {
+                items = [];
+            }
+
+            //  检测队列是否为空
+            this.isEmpty = function() {
+                return items.length === 0;
+            }
+        }
+    </script>
+</body>
+</html>

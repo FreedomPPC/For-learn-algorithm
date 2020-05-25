@@ -23,5 +23,5 @@ const countBinarySubstrings = str => {
     }
     return r;
 };
-
+const arr = [1,2, 3]
 export default countBinarySubstrings;
